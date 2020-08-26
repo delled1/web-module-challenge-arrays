@@ -275,6 +275,21 @@ var regionalFlavors = [
   "Caramel 'n' Cookies",
 ];
 
-function getRandomFlavors(/*code here*/) {
-  /*code here*/
+function getRandomFlavors(a, b, c, d) {
+  let randomFlavors = [];
+  let totalFlavors = [...a, ...b, ...c, ...d];
+  for (let i = 0; i < 31; i++) {
+    randomFlavors.push(totalFlavors[Math.floor(Math.random() * [i])]);
+  }
+
+  return randomFlavors;
 }
+
+console.log(
+  getRandomFlavors(
+    newFlavors,
+    seasonalFlavors,
+    regionalFlavors,
+    originalFlavors
+  )
+);
